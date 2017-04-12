@@ -1,0 +1,34 @@
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#carousel {
+    width: 900px;
+    height: 600px;
+    border: 2px solid gray;
+    border-radius: 2px;
+    overflow: hidden; 
+}
+
+#carousel ul {
+    width: 4500px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#carousel ul li {
+    width: 900px;
+    height: 600px;
+    float: left; 
+}
+
+#carousel ul li img {
+    cursor: pointer;
+}
+
+button {
+    width: 80px;
+    border-radius: 2px;
+}
