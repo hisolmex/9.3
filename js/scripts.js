@@ -1,5 +1,6 @@
 $(function () {
-    var carouselList = $('#carousel ul');
+    var carouselList = $('#carousel ul'),
+        interval;
 
     function next() {
         carouselList.animate({'marginLeft': -900}, 500, moveFirstSlideAfterLast);
@@ -27,12 +28,16 @@ $(function () {
         firstItem.before(lastItem);
     }
 
-    setInterval(next, 4000);
+    interval = setInterval(next, 4000);
 
     $('#next').click(function () {
+        clearInterval(interval);
         next();
+        interval = setInterval(next, 4000);
     });
     $('#previous').click(function () {
+        clearInterval(interval);
         prev();
+        interval = setInterval(next, 4000);
     });
 });
